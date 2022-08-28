@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+  <title>homepage</title>
+</head>
+
+
+<body>
+  <style>
+    * {
+      font-family: "Times New Roman", Times, serif;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+
+    }
+
+    body {
+      /*font-family: Verdana, sans-serif;*/
+      background-color: #edf5e1;
+
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    .i {
+      padding: 2px;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      width: 100%;
+      position: absolute;
+      margin: 40px 0px;
+      margin-bottom: 0px;
+      display: flex;
+      z-index: -1;
+      left: 0px;
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: relative;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      z-index: -1;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: relative;
+      top: 0;
+      z-index: -1;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0px 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      z-index: -1;
+    }
+
+    .active {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {
+        font-size: 11px
+      }
+    }
+
+    .material-icons.md-18 {
+      font-size: 24px;
+    }
+
+    #white {
+      background-color: #EDF5E1;
+    }
+
+    .corona {
+      padding-top: 5px;
+    }
+
+    .d {
+      color: #05386B;
+      width: 600px;
+      border: 2px solid black;
+      padding: 30px;
+      margin: 50px;
+      display: inline-block;
+      box-shadow: 10px 15px 15px grey;
+      background-color: #8EE4AF;
+      box-sizing: border-box;
+      border-radius: 23px;
+    }
+
+    .d:hover {
+      background-color: #edf5e1;
+      border: 2px solid grey;
+    }
+
+
+    .mental {
+      display: flex;
+      justify-content: center;
+    }
+
+    #padding {
+      padding: 80px 40px;
+      color: #05386B;
+      margin: 10px auto;
+      font-weight: 1000;
+      font-size: 19px;
+    }
+
+
+    h1 {
+      text-align: center;
+      border: none;
+      background-color: white;
+    }
+
+    .upper {
+      /* position:absolute;*/
+      top: 540px;
+      /*z-index:-1;*/
+      margin-bottom: 0px;
+      background-color: #edf5e1;
+    }
+  </style>
+
+  <div id="nav">
+    <img class="logo" src="{% static 'images/logo.jpg' %}">
+
+    <ul>
+      <a class="brand" href="#">Disease Prediction System</a>
+      <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+      <!--<li><a href="#gethelp">Get help</a></li>-->
+      <!--<li><a href="#covid-19">Covid-19</a></li>-->
+      <!-- <a class="active" href="corona.html"><i class="material-icons md-18">coronavirus</i><span class="corona">Covid-19</span></a> -->
+
+      <!--<li><a href="#donate">Donate</a></li>-->
+      <!-- <a class="active" href="donate.html"><i class="fa fa-fw fa-rupee"></i>Donate</a> -->
+
+      <a class="active" href="/diseasePrediction"><i class="fa fa-fw fa-rupee"></i>Disease Prediction</a>
+
+    </ul>
+  </div>
+  <div>Mental Health Awareness</div>
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <!-- <div class="numbertext">1 / 3</div> -->
+      <img src="{% static 'images/Design2.png' %}" style="width:1349px;height:490px;opacity:1">
+      <!-- <div class="text">Caption Text</div> -->
+    </div>
+    <div class="mySlides fade">
+      <!-- <div class="numbertext">2 / 3</div> -->
+      <img src="{% static 'images/Design1.png' %}" style="width:1349px;height:490px;opacity:0.75">
+      <!-- <div class="text">Caption Two</div> -->
+    </div>
+
+    <div class="mySlides fade">
+      <!-- <div class="numbertext">3 / 3</div> -->
+      <img src="{% static 'images/Design3.png' %}" style="width:1349px;height:490px;opacity:1">
+      <!-- <div class="text">Caption Three</div> -->
+    </div>
+
+  </div>
+  <br>
+
+
+  </div>
+  <div id="padding">
+    <p>The word health refers to a state of complete emotional and physical well-being. Healthcare exists to help people
+      maintain this optimal state of health.</p>
+
+    <h2>Factors for good health</h2>
+    <h3>Genetic factors</h3>
+    <p>A person is born with a variety of genes. In some people, an unusual genetic pattern or change can lead to a
+      less-than-optimum level of health. People may inherit genes from their parents that increase their risk for
+      certain
+      health conditions.</p>
+    <h3>Environmental factors</h3>
+    <p>Environmental factors play a role in health. Sometimes, the environment alone is enough to impact health. Other
+      times, an environmental trigger can cause illness in a person who has an increased genetic risk of a particular
+      disease.
+    </p>
+
+  </div>
+  <div id="white" style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <div class="upper">
+    <div class="mental">
+      <div class="d">
+        <h3 style="text-align: center;">Decision Tree</h3>
+
+
+        <ul>
+          <li>Decision trees have easy to use features to identify the most significant dimensions, handle missing
+            values, and deal with outliers.</li>
+          <li>Unlike Bayes and K-NN, decision trees can work directly from a table of data, without any prior design
+            work.</li>
+          <li>If you don’t know your classifiers, a decision tree will choose those classifiers for you from a data
+            table. Naive Bayes requires you to know your classifiers in advance. </li>
+          <li>Although over-fitting is a major problem with decision trees, the issue could (at least, in theory) be
+            avoided by using boosted trees or random forests. </li>
+          <li> In many situations, boosting or random forests can result in trees outperforming either Bayes or K-NN.
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="d">
+        <h3 style="text-align: center;">KNN</h3>
+
+
+
+        <ul>
+          <li>Naive Bayes will only work if the decision boundary is linear, elliptic, or parabolic. Otherwise, choose
+            K-NN.</li>
+          <li>K-NN (and Naive Bayes) outperform decision trees when it comes to rare occurrences.</li>
+          <li>K-NN doesn’t require that you know anything about the underlying probability distributions.</li>
+
+          <li>If having conditional independence will highly negative affect classification, you’ll want to choose K-NN
+            over Naive Bayes.</li>
+          <li>when a particular attribute’s conditional probability equals zero, Naive Bayes will completely fail to
+            produce a valid prediction</li>
+
+          <ul>
+            </p>
+      </div>
+
+     
+    </div>
+    <div class="mental">
+      <div class="d">
+        <h3 style="text-align: center;">Naive Bayes</h3>
+
+        <ul>
+          <li>Naive Bayes is a linear classifier while K-NN is not. It tends to be faster when applied to big data</li>
+          <li> In comparison, k-nn is usually slower for large amounts of data, because of the calculations required for
+            each new step in the process. If speed is important, choose Naive Bayes over K-NN.</li>
+          <li>Naive Bayes offers you two hyperparameters to tune for smoothing: alpha and beta. A hyperparameter is a
+            prior parameter that are tuned on the training set to optimize it. In comparison, K-NN only has one option
+            for tuning: the “k”, or number of neighbors. </li>
+          <li>This method is not affected by the curse of dimensionality and large feature sets, while K-NN has problems
+            with both.</li>
+
+        </ul>
+        </p>
+      </div>
+      <div class="d">
+        <h3 style="text-align: center;">Random Forest </h3>
+
+        <ul>
+          <li> Random Forest is based on the bagging algorithm and uses Ensemble Learning technique. It creates as many
+            trees on the subset of the data and combines the output of all the trees. In this way it reduces overfitting
+            problem in decision trees and also reduces the variance and therefore improves the accuracy.</li>
+          <li> Random Forest can be used to solve both classification as well as regression problems.</li>
+          <li>Random Forest can automatically handle missing values.</li>
+          <li>Building up of clutter to the point where rooms become unusable</li>
+          <li>Random Forest is comparatively less impacted by noise.</li>
+        </ul>
+        </p>
+      </div>
+
+
+
+    </div>
+  </div>
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+  </script>
+
+</body>
+<footer class="footer-panel">
+  <div> Contact us @:<br><br>
+    Harshitha M-9466651754<br>
+    Jahnavi-9463464456<br>
+    Himani-6857492839<br>
+    Harshitha RM-9121383478<br>
+</footer>
+
+</html>
